@@ -18,6 +18,9 @@ body{font-family:'CoFo Peshka','Assistant',sans-serif}html,body,*{font-variation
 body{margin:0;background:#FBF9F5}
 a{color:#1C1A17}a:hover{color:#5A534A}
 img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:none}img[src$='logo.svg']{background:none}@media (max-width:640px){h1{font-size:38px!important}h2{font-size:32px!important}}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","additionalType":"https://en.wikipedia.org/wiki/Architect","name":"מאיה מזוז אדריכלות","url":"https://mayamazuz.com/","logo":"https://mayamazuz.com/img/logo.svg","image":"https://static.wixstatic.com/media/694e92_774099b3412841d08b0cf5a9f78fa0ae~mv2.jpg/v1/fill/w_1400,h_1400,al_c,q_85,enc_avif,quality_auto/carmit-living.jpg","description":"אדריכלות מקומית ותכנון אנושי למבני ציבור ולבתים בנגב ובערבה.","slogan":"לתכנן לאנשים, לעבוד עם האקלים, להשאיר מרחב לכל השאר לקרות.","telephone":"+972-52-446-5443","email":"mayamazuz@gmail.com","areaServed":[{"@type":"Place","name":"הנגב"},{"@type":"Place","name":"הערבה"}],"knowsAbout":["תכנון מבני ציבור","תכנון בתים פרטיים","תכנון אקלימי","הנדסת אנוש","פסיכולוגיה מרחבית"],"founder":{"@type":"Person","name":"מאיה מזוז","jobTitle":"אדריכלית"},"sameAs":["https://www.instagram.com/mayamazuz","https://www.linkedin.com/in/mayamazuz/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"שירותים","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"תכנון מבני ציבור"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"תכנון בית בנגב ובערבה"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ייעוץ לפני קניית מגרש או בית","url":"https://mayamazuz.com/guide.html"}}]}}
+</script>
 </head>
 <body>
 <div dir="rtl" style="font-family: 'CoFo Peshka', 'Assistant', sans-serif; color: #1C1A17; background: #FBF9F5; font-size: 18px; line-height: 1.6">
@@ -198,7 +201,7 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 <a href="guide.html" style="font-weight: 700; color: #9E2337">לקריאת המדריך ←</a>
 </div>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 8px; font-size: 18px">
-<a href="https://wa.me/972524465443" style="font-weight: 700">וואטסאפ: 052-4465443</a>
+<a href="https://wa.me/972524465443" data-wa="היי מאיה, הגעתי מהאתר." data-wa-place="home_contact" style="font-weight: 700">וואטסאפ: 052-4465443</a>
 <a href="mailto:mayamazuz@gmail.com">mayamazuz@gmail.com</a>
 </div>
 </div>
@@ -241,8 +244,9 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 
 </div>
 <script>
-function sendLead(e){e.preventDefault();var f=document.getElementById('contact-form');var t='היי מאיה, הגעתי מהאתר.\nשם: '+f.name.value+'\nטלפון: '+f.phone.value+'\nמה מתכננים: '+document.getElementById('f-type').value+'\n'+document.getElementById('f-msg').value;window.open('https://wa.me/972524465443?text='+encodeURIComponent(t),'_blank');return false;}
+function sendLead(e){e.preventDefault();var f=document.getElementById('contact-form');var first=window.mmTag?window.mmTag('היי מאיה, הגעתי מהאתר.'):'היי מאיה, הגעתי מהאתר.';if(window.mmTrack)window.mmTrack('lead_form_submit',{type:document.getElementById('f-type').value});var t=first+'\nשם: '+f.name.value+'\nטלפון: '+f.phone.value+'\nמה מתכננים: '+document.getElementById('f-type').value+'\n'+document.getElementById('f-msg').value;window.open('https://wa.me/972524465443?text='+encodeURIComponent(t),'_blank');return false;}
 </script>
+<script src="site.js?v=20261012" defer></script>
 <script src="projects.js?v=20261011e" defer></script>
 </body>
 </html>
