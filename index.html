@@ -66,7 +66,7 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 <p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; color: #9E2337">01</p>
 <h3 style="margin: 0; font-family: 'CoFo Peshka', 'CoFo Peshka Variable', 'Heebo', sans-serif; font-size: 30px; font-weight: 700">מבני ציבור</h3>
 <p style="margin: 0; color: #3D3830">גני ילדים, מבני קהילה ומבני ציבור קטנים למועצות ולרשויות בדרום. מבנה שחוסך באנרגיה ובתחזוקה, ושמספר את הסיפור של הקהילה שהוא משרת.</p>
-<a href="#public-experience" style="margin-top: auto; font-weight: 700; color: #9E2337">לניסיון במבני ציבור ←</a>
+<a href="#public-experience" data-toggle-public aria-controls="public-experience" aria-expanded="false" style="margin-top: auto; font-weight: 700; color: #9E2337">לניסיון במבני ציבור ←</a>
 </article>
 <article id="homes" style="flex: 1 1 320px; min-width: 0; background: #FBF9F5; padding: 36px 32px; border-top: 4px solid #1C1A17; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; color: #5A534A">02</p>
@@ -84,7 +84,7 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 </div>
 </section>
 
-<section id="public-experience" aria-label="ניסיון במבני ציבור" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<section id="public-experience" hidden aria-label="ניסיון במבני ציבור" style="scroll-margin-top: 16px; max-width: 1200px; margin: 0 auto; padding: 96px 24px">
 <div style="display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-end; margin-bottom: 40px">
 <div style="flex: 1 1 520px; min-width: 0">
 <p style="margin: 0 0 14px; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; color: #9E2337">ניסיון במבני ציבור</p>
@@ -111,6 +111,7 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 <p style="margin: 0; flex: 1 1 360px; min-width: 0; font-size: 20px; font-weight: 700">מתכננים מבנה ציבור ביישוב או במועצה? בואו נדבר על הפרויקט הבא.</p>
 <a href="https://wa.me/972524465443" data-wa="היי מאיה, הגעתי מהאתר. אשמח לדבר על תכנון מבנה ציבור." data-wa-place="home_public" style="text-decoration: none; background: #9E2337; color: #FBF9F5; padding: 16px 28px; font-weight: 700; border-radius: 2px">לשיחה בוואטסאפ</a>
 </div>
+<p style="margin: 24px 0 0; text-align: center"><a href="#public" data-close-public style="font-weight: 600; color: #5A534A">סגירה ↑</a></p>
 </section>
 
 <section aria-label="איך אני מתכננת" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
@@ -276,6 +277,13 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 function sendLead(e){e.preventDefault();var f=document.getElementById('contact-form');var first=window.mmTag?window.mmTag('היי מאיה, הגעתי מהאתר.'):'היי מאיה, הגעתי מהאתר.';if(window.mmTrack)window.mmTrack('lead_form_submit',{type:document.getElementById('f-type').value});var t=first+'\nשם: '+f.name.value+'\nטלפון: '+f.phone.value+'\nמה מתכננים: '+document.getElementById('f-type').value+'\n'+document.getElementById('f-msg').value;window.open('https://wa.me/972524465443?text='+encodeURIComponent(t),'_blank');return false;}
 </script>
 <script src="site.js?v=20261012" defer></script>
+<script>
+(function(){var sec=document.getElementById('public-experience'),btn=document.querySelector('[data-toggle-public]');if(!sec||!btn)return;
+function set(open,scroll){sec.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'סגירת הניסיון במבני ציבור ↑':'לניסיון במבני ציבור ←';if(open&&scroll)sec.scrollIntoView({behavior:'smooth',block:'start'});}
+btn.addEventListener('click',function(e){e.preventDefault();var open=sec.hidden;set(open,true);try{history.replaceState(null,'',open?'#public-experience':location.pathname+location.search)}catch(x){}});
+var c=sec.querySelector('[data-close-public]');if(c)c.addEventListener('click',function(e){e.preventDefault();set(false);document.getElementById('public').scrollIntoView({behavior:'smooth',block:'start'});try{history.replaceState(null,'',location.pathname+location.search)}catch(x){}});
+if(location.hash==='#public-experience')set(true,true);})();
+</script>
 <script src="projects.js?v=20261011e" defer></script>
 </body>
 </html>
