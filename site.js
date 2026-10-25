@@ -7,7 +7,7 @@
       (מתחיל ב־G-) בשורה GA_ID למטה. בלי מזהה, שום דבר לא נטען.
 */
 (function () {
-  var GA_ID = ''; // לדוגמה: 'G-ABC123XYZ'
+  var GA_ID = 'G-NLD0D3CZLB';
   var PHONE = '972524465443';
   var NAMES = {
     instagram: 'אינסטגרם', ig: 'אינסטגרם',
