@@ -11,6 +11,7 @@
   var PHONE = '972524465443';
   var NAMES = {
     instagram: 'אינסטגרם', ig: 'אינסטגרם',
+    ig_mazuzb: 'האינסטגרם של Mazuz B',
     linkedin: 'לינקדין', li: 'לינקדין',
     gbp: 'הפרופיל בגוגל', google: 'גוגל',
     facebook: 'פייסבוק', fb: 'פייסבוק',
@@ -40,7 +41,18 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', GA_ID);
+    // הכתובת המלאה (עם הסימון) נמסרת ל־Analytics, ואז הסימון נמחק משורת הכתובת
+    window.gtag('config', GA_ID, { page_location: location.href });
+    try {
+      var q = new URLSearchParams(location.search), dirty = false;
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src'].forEach(function (k) {
+        if (q.has(k)) { q.delete(k); dirty = true; }
+      });
+      if (dirty) {
+        var rest = q.toString();
+        history.replaceState(history.state, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+      }
+    } catch (e) {}
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
