@@ -18,22 +18,29 @@ body{font-family:'CoFo Peshka','Assistant',sans-serif}html,body,*{font-variation
 body{margin:0;background:#FBF9F5}
 a{color:#1C1A17}a:hover{color:#5A534A}
 img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:none}img[src$='logo.svg']{background:none}@media (max-width:640px){h1{font-size:38px!important}h2{font-size:32px!important}}</style>
+<style>.dd summary::-webkit-details-marker{display:none}</style>
+<script>
+document.addEventListener('click',function(e){document.querySelectorAll('details.dd[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+</script>
 </head>
 <body>
 <div dir="rtl" style="font-family: 'CoFo Peshka', 'Assistant', sans-serif; color: #1C1A17; background: #FBF9F5; font-size: 18px; line-height: 1.6">
 
-<header style="border-bottom: 1px solid #E4DCCD; background: #FBF9F5">
+<header style="border-bottom: 1px solid #E4DCCD; background: #FBF9F5; position: relative; z-index: 20">
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="index.html" aria-label="מאיה מזוז אדריכלות, לראש העמוד" style="text-decoration: none; display: flex; align-items: center; gap: 14px">
+<a href="index.html" aria-label="מאיה מזוז אדריכלות, לדף הבית" style="text-decoration: none; display: flex; align-items: center; gap: 14px">
 <img src="img/logo.svg" alt="" style="display: block; width: 178px; height: 48px">
 </a>
-<nav aria-label="ניווט ראשי" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 16px">
-<a href="index.html#public" style="text-decoration: none">מבני ציבור</a>
-<a href="index.html#homes" style="text-decoration: none">בתים במדבר</a>
-<a href="consult.html" style="text-decoration: none">ייעוץ</a>
-<a href="index.html#projects" style="text-decoration: none">פרויקטים</a>
-<a href="index.html#about" style="text-decoration: none">אודות</a>
-<a href="index.html#contact" style="text-decoration: none; background: #1C1A17; color: #FBF9F5; padding: 10px 20px; border-radius: 2px; font-weight: 600">לדבר איתי</a>
+<nav aria-label="ניווט ראשי" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; font-size: 16px">
+<a href="public.html" style="text-decoration: none">מבני ציבור</a>
+<a href="homes.html" aria-current="page" style="text-decoration: none; font-weight: 700; color: #9E2337">בתים פרטיים</a>
+<details class="dd" style="position: relative"><summary style="cursor: pointer; list-style: none; ">ייעוץ ▾</summary>
+<div style="position: absolute; top: 30px; right: -16px; min-width: 250px; background: #FBF9F5; border: 1px solid #E4DCCD; padding: 8px 0; display: flex; flex-direction: column">
+<a href="developers.html" style="text-decoration: none; padding: 10px 16px">ליווי אדריכלי ליזמים ולמועצות</a>
+<a href="consult.html" style="text-decoration: none; padding: 10px 16px">ייעוץ לבונים פרטיים</a>
+</div></details>
+<a href="projects.html" style="text-decoration: none">פרויקטים</a>
+<a href="#contact" style="text-decoration: none; background: #1C1A17; color: #FBF9F5; padding: 10px 20px; border-radius: 2px; font-weight: 600">לדבר איתי</a>
 </nav>
 </div>
 </header>
@@ -118,7 +125,7 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 
 </ol>
 
-<section aria-label="ייעוץ לפני שחותמים" style="background: #1C1A17; color: #FBF9F5; margin-top: 48px">
+<section id="contact" aria-label="ייעוץ לפני שחותמים" style="background: #1C1A17; color: #FBF9F5; margin-top: 48px">
 <div style="max-width: 1000px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px">
 <div style="flex: 1 1 480px; min-width: 0">
 <h2 style="margin: 0; font-family: 'CoFo Peshka', 'Heebo', sans-serif; font-size: 40px; line-height: 1.15; font-weight: 900">עניתם "לא יודע" על שתיים או יותר?</h2>

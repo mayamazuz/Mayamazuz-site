@@ -363,6 +363,7 @@
     items = (d.dataItems || []).map(function (i) { return i.data || {}; })
       .filter(function (p) { return p.title && p.visible !== false && p.showOnHome !== false; })
       .sort(function (a, b) { return (a.order == null ? 999 : a.order) - (b.order == null ? 999 : b.order); });
+    var LIM = parseInt(grid.getAttribute('data-limit') || '0', 10); if (LIM) items = items.slice(0, LIM);
     if (!items.length) return;
     var nf = items.filter(function (p) { return !p.featured; }).length;
     grid.innerHTML = items.map(function (p, i) { return p.featured ? featured(p, i) : card(p, i); }).join('') + (nf % 2 ? '<span aria-hidden="true" style="flex: 1 1 460px; min-width: 0; height: 0; margin-top: -48px"></span>' : '');
