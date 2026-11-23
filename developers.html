@@ -36,6 +36,10 @@ img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:non
 .cv{flex:1 1 250px;min-width:0;border-top:1px solid #1C1A17;padding-top:16px}
 .cv h3{margin:0 0 6px;font-size:20px;font-weight:700}
 .cv p{margin:0;color:#3D3830;font-size:17px}
+.prj{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid #E4DCCD}
+.prj li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:14px 0;border-bottom:1px solid #E4DCCD}
+.prj b{font-size:18px;font-weight:700}
+.prj span{font-size:16px;color:#5A534A}
 @media (max-width:640px){.svc{padding:26px 22px}.scan div{flex-basis:45%}}
 </style>
 <script type="application/ld+json">
@@ -168,11 +172,23 @@ document.addEventListener('click',function(e){document.querySelectorAll('details
 </section>
 
 <section aria-label="רקע מקצועי" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px">
-<h2 class="h2" style="margin-bottom: 36px">רקע מקצועי</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 36px 32px">
-<div class="cv"><h3>תכנון</h3><p>אדריכלית רשויה, עם עשר שנות ניסיון בתכנון. ראש חוליה במשרד צ. מוססקו אדריכלים, כולל קמפוס מסחר ותעסוקה בפורום מודיעין ושינוי תב"ע נקודתי.</p></div>
-<div class="cv"><h3>כלכלה ומימון</h3><p>תואר בכלכלה ו־MBA עם התמחות במימון, לצד B.Arch.</p></div>
-<div class="cv"><h3>יזמות ובנייה</h3><p>שותפה בקבוצת <span dir="ltr" style="white-space: nowrap">Mazuz B</span>, כולל תכנון וניהול התכנון של פרויקטים יזמיים.</p></div>
+<h2 class="h2" style="margin-bottom: 20px">רקע מקצועי</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start">
+<div style="flex: 1 1 420px; min-width: 0">
+<p style="margin: 0; font-size: 19px; color: #3D3830">אדריכלית רשויה עם עשר שנות ניסיון בתכנון. כראש חוליה במשרד צ. מוססקו אדריכלים, מהמשרדים הוותיקים והגדולים בישראל, הובלתי פרויקטים מהסקיצה ועד התכנון המפורט: ניהול צוות התכנון, תיאום היועצים, עבודה מול ועדות ורשויות, ועמידה בתקציב ובלוחות הזמנים.</p>
+<p style="margin: 14px 0 0; font-size: 19px; color: #3D3830">בין הפרויקטים: מבני תעסוקה ומסחר, תחרויות אדריכלים, ומבני חינוך וספורט.</p>
+<ul class="prj">
+<li><b>קמפוס מסחר ותעסוקה, מודיעין</b><span>תכנון הקמפוס, כולל קידום שינוי תב"ע נקודתי</span></li>
+<li><b>מרכז התרבות, חדרה</b><span>תחרות אדריכלים</span></li>
+<li><b>ספריית המחר, הרצליה</b><span>תחרות אדריכלים</span></li>
+<li><b>המכללה הטכנולוגית של חיל האוויר</b><span>תכנון מבני חינוך וספורט</span></li>
+</ul>
+<a href="https://www.mosessco.com" target="_blank" rel="noopener" style="display: inline-block; margin-top: 18px; font-weight: 700; color: #9E2337">לאתר משרד צ. מוססקו אדריכלים ↗</a>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+<div class="cv" style="flex: 0 0 auto"><h3>כלכלה ומימון</h3><p>תואר בכלכלה ו־MBA עם התמחות במימון, לצד B.Arch.</p></div>
+<div class="cv" style="flex: 0 0 auto"><h3>יזמות ובנייה</h3><p>שותפה בקבוצת <span dir="ltr" style="white-space: nowrap">Mazuz B</span>, כולל תכנון וניהול התכנון של פרויקטים יזמיים.</p></div>
+</div>
 </div>
 </section>
 
