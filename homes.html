@@ -18,7 +18,9 @@ body{font-family:'CoFo Peshka','Assistant',sans-serif}html,body,*{font-variation
 body{margin:0;background:#FBF9F5}
 a{color:#1C1A17}a:hover{color:#5A534A}
 img{background:#EDE5D6}.logo-white{filter:brightness(0) invert(1);background:none}img[src$='logo.svg']{background:none}@media (max-width:640px){h1{font-size:38px!important}h2{font-size:32px!important}}</style>
-<style>.dd summary::-webkit-details-marker{display:none}</style>
+<style>.dd summary::-webkit-details-marker{display:none}
+.hbg{position:absolute;top:0;bottom:0;left:0;width:60%;background:url(https://static.wixstatic.com/media/694e92_37000bc1c5f24fd682dbbb2b0b1d4658~mv2.png/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/lotan-courtyards.png) center/cover no-repeat;opacity:.26;-webkit-mask-image:linear-gradient(to left,transparent 0%,#000 55%);mask-image:linear-gradient(to left,transparent 0%,#000 55%);pointer-events:none}
+@media (max-width:640px){.hbg{width:100%;opacity:.18;-webkit-mask-image:linear-gradient(to top,transparent 0%,#000 40%);mask-image:linear-gradient(to top,transparent 0%,#000 40%)}}</style>
 <script>
 document.addEventListener('click',function(e){document.querySelectorAll('details.dd[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
 </script>
@@ -45,9 +47,10 @@ document.addEventListener('click',function(e){document.querySelectorAll('details
 </div>
 </header>
 
-<section style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 24px">
-<h1 style="margin: 0 0 20px; font-family: 'CoFo Peshka', 'CoFo Peshka Variable', 'Heebo', sans-serif; font-size: 54px; line-height: 1.12; font-weight: 900">בית בנגב ובערבה</h1>
-<p style="margin: 0; font-size: 20px; color: #3D3830; max-width: 720px">בית שמרגיש בבית: מקום שגדלים בו ילדים, שנוח ופשוט לתחזק, ושיודע לייצר גם מקום למפגש. חומרים שמתאימים למקום, אקלים נוח ושפה משותפת עם הטבע, מאדריכלית שגדלה פה ויודעת מה זה ארבעים מעלות בצל.</p>
+<section style="position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto; padding: 88px 24px 96px">
+<div aria-hidden="true" class="hbg"></div>
+<h1 style="position: relative; margin: 0 0 20px; font-family: 'CoFo Peshka', 'CoFo Peshka Variable', 'Heebo', sans-serif; font-size: 54px; line-height: 1.12; font-weight: 900">בית בנגב ובערבה</h1>
+<p style="position: relative; margin: 0; font-size: 20px; color: #3D3830; max-width: 720px">בית שמרגיש בבית: מקום שגדלים בו ילדים, שנוח ופשוט לתחזק, ושיודע לייצר גם מקום למפגש. חומרים שמתאימים למקום, אקלים נוח ושפה משותפת עם הטבע, מאדריכלית שגדלה פה ויודעת מה זה ארבעים מעלות בצל.</p>
 </section>
 
 <section aria-label="איך אני מתכננת" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
